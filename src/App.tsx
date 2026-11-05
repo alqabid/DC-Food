@@ -757,6 +757,12 @@ export default function App() {
             onSelectDish={(dish) => {
               setActiveProductModal(dish);
             }}
+            onOpenAdmin={() => {
+              if (typeof window !== 'undefined') {
+                window.history.pushState({}, '', '/admin');
+              }
+              setIsAdminPortal(true);
+            }}
           />
         ) : (
           <div className="flex flex-col lg:flex-row items-start gap-8">

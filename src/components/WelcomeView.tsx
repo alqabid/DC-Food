@@ -26,6 +26,7 @@ interface WelcomeViewProps {
   menuItems: MenuItem[];
   onEnterMenu: (category?: MainCategory) => void;
   onSelectDish: (item: MenuItem) => void;
+  onOpenAdmin: () => void;
 }
 
 const SLIDE_DURATION_MS = 4800;
@@ -36,6 +37,7 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
   menuItems,
   onEnterMenu,
   onSelectDish,
+  onOpenAdmin,
 }) => {
   const activeFlyers = flyers.filter((f) => f.enabled);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -96,7 +98,7 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
     .slice(0, 4);
 
   return (
-    <div className="space-y-8 pb-8">
+    <div className="space-y-8 pb-4">
       {/* Main Welcome & IG Story Flyer Deck */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         {/* Left / Primary Column: Instagram-Style Automated Looping Flyer Deck */}
@@ -179,14 +181,14 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="text-white font-extrabold text-sm tracking-tight">
-                          DC FOODS LIVE FLYERS
+                          DC FOODS FLYERS
                         </span>
                         <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-white/15 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider text-amber-300">
                           News & Promos
                         </span>
                       </div>
                       <p className="text-xs text-stone-300 font-mono tabular-nums">
-                        Slide {safeIndex + 1} of {activeFlyers.length} · Auto-Looping
+                        {safeIndex + 1} / {activeFlyers.length}
                       </p>
                     </div>
                   </div>
@@ -345,7 +347,7 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
                 Hot Party Jollof, Crispy Chicken & Wood-Fired Pizza
               </h2>
               <p className="text-sm text-stone-600 leading-relaxed">
-                Tap any picture below to pack your food bag in seconds—visual and effortless for everyone.
+                Tap any picture below to pack your food bag in seconds.
               </p>
             </div>
 
@@ -508,6 +510,21 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
             </button>
           ))}
         </div>
+      </div>
+
+      {/* Invisible / Discreet Link Below the Welcome Page to Open Admin */}
+      <div className="pt-8 pb-2 flex justify-center">
+        <a
+          href="/admin"
+          onClick={(e) => {
+            e.preventDefault();
+            onOpenAdmin();
+          }}
+          aria-label="Admin Portal"
+          className="px-6 py-2 text-[11px] font-semibold text-stone-300/40 hover:text-stone-400 transition-colors select-none cursor-pointer"
+        >
+          © DC FOODS
+        </a>
       </div>
     </div>
   );
