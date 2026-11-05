@@ -1,0 +1,6 @@
+{
+  "name": "Chris B. Legacy Code Audit & Architecture Explorer",
+  "description": "Deep technical deconstruction, bundle analysis, component tree inspection, and legacy bug audit of https://chrisb.app/menu (Pizzaman Chickenman).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
