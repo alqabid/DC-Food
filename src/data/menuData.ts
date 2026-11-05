@@ -4,16 +4,25 @@
  */
 
 import { Branch, MenuItem, ProductExtra, SavedLocation, OrderRecord } from '../types';
+import imgBannerFeast from '../assets/images/promo_banner_feast_1793887634784.jpg';
+import imgBannerPizza from '../assets/images/promo_banner_pizza_1793887635434.jpg';
+import imgPizza from '../assets/images/food_pizza_signature_1793887635985.jpg';
+import imgJollof from '../assets/images/food_jollof_chicken_1793887636679.jpg';
+import imgWings from '../assets/images/food_wings_bucket_1793887636902.jpg';
+import imgFriedRice from '../assets/images/food_fried_rice_special_1793890643012.jpg';
+import imgSobolo from '../assets/images/food_sobolo_drinks_1793890643926.jpg';
+import imgKelewele from '../assets/images/food_kelewele_sides_1793890645068.jpg';
+import imgShawarma from '../assets/images/food_burger_shawarma_1793890645310.jpg';
 
-export const IMG_BANNER_FEAST = '/src/assets/images/promo_banner_feast_1793887634784.jpg';
-export const IMG_BANNER_PIZZA = '/src/assets/images/promo_banner_pizza_1793887635434.jpg';
-export const IMG_PIZZA = '/src/assets/images/food_pizza_signature_1793887635985.jpg';
-export const IMG_JOLLOF = '/src/assets/images/food_jollof_chicken_1793887636679.jpg';
-export const IMG_WINGS = '/src/assets/images/food_wings_bucket_1793887636902.jpg';
-export const IMG_FRIED_RICE = '/src/assets/images/food_fried_rice_special_1793890643012.jpg';
-export const IMG_SOBOLO = '/src/assets/images/food_sobolo_drinks_1793890643926.jpg';
-export const IMG_KELEWELE = '/src/assets/images/food_kelewele_sides_1793890645068.jpg';
-export const IMG_SHAWARMA = '/src/assets/images/food_burger_shawarma_1793890645310.jpg';
+export const IMG_BANNER_FEAST = imgBannerFeast;
+export const IMG_BANNER_PIZZA = imgBannerPizza;
+export const IMG_PIZZA = imgPizza;
+export const IMG_JOLLOF = imgJollof;
+export const IMG_WINGS = imgWings;
+export const IMG_FRIED_RICE = imgFriedRice;
+export const IMG_SOBOLO = imgSobolo;
+export const IMG_KELEWELE = imgKelewele;
+export const IMG_SHAWARMA = imgShawarma;
 
 export const BRANCHES: Branch[] = [
   {
